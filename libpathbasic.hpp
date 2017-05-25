@@ -8,8 +8,8 @@
 #include <utility>
 #include <memory>
 
-#include "Pathdata.h"
-#include "Map.h"
+#include "../libmouse/Pathdata.h"
+#include "../libmouse/Map.h"
 
 class Path{
 private:

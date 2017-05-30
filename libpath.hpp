@@ -1,5 +1,5 @@
 /**
- * @file libpath.h
+ * @file libpathbasic.h
  * @brief 最短パス生成のテンプレートクラス
  */
 
@@ -8,17 +8,15 @@
 #include <utility>
 #include <memory>
 
-#include "../libmouse/Pathdata.h"
+#include "../libmouse/Path.h"
 #include "../libmouse/Map.h"
 
-class Path{
+class DerivingPath{
 private:
 	
 public:
-	int getPath(Pathdata& path, const Map& map, const std::pair<uint32_t, uint32_t>& pair){};
+	int getPath(std::vector<Motion>& path, const Map& map, const std::pair<uint32_t, uint32_t>& pair);
 
-	~Path(){};
+	~DerivingPath();
 };
-
-typedef Path* create_p();
 

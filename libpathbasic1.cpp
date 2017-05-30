@@ -1,16 +1,17 @@
 /**
  * @file libpathbasic1.cpp
  */
-#include "libpathbasic.hpp"
+#include "libpath.hpp"
 
 using namespace std;
 
-int Path::getPath(Pathdata& path, const Map& map, const std::pair<uint32_t, uint32_t>& pair){
+int DerivingPath::getPath(std::vector<Motion>& path, const Map& map, const std::pair<uint32_t, uint32_t>& pair){
 	return 10;
 }
 
-Path::~Path(){}
+DerivingPath::~DerivingPath(){}
 
-extern "C" Path* CreateMyPath(){
-	return new Path;
+extern "C" int CreateMyPath(std::vector<Motion>& path, const Map& map, const std::pair<uint32_t, uint32_t>& pair){
+	DerivingPath newpath;
+	return newpath.getPath(path, map, pair);
 }
